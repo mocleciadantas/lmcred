@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L&M CRED – Soluções Financeiras</title>
+  <meta name="description" content="L&M CRED • Adiantamento FGTS, Crédito Consignado INSS e Trabalhador Privado, Crédito na Fatura de Energia. Atendimento rápido pelo WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand-navy:#0e2f52;      /* azul escuro base */
+      --brand-blue:#1f6fd6;      /* azul destaque */
+      --brand-green:#22c55e;     /* verde CTA (similar ao WhatsApp) */
+      --brand-green-dark:#16a34a;
+      --text:#0e1b2a;
+      --muted:#5b6b7a;
+      --bg:#ffffff;
+      --card:#f6f8fb;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(14,47,82,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif}
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .container{max-width:1120px;margin-inline:auto;padding:20px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #eef2f7;z-index:10}
+    header .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:14px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{height:120px;width:auto;display:block}
+    .logo .name{font-weight:800;letter-spacing:.5px;color:var(--brand-navy)}
+
+    /* CTA button */
+    .btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:var(--brand-green);color:#fff;font-weight:800;padding:14px 18px;border-radius:999px;box-shadow:var(--shadow);border:2px solid transparent}
+    .btn-whatsapp:hover{background:var(--brand-green-dark)}
+    .btn-whatsapp .icon{display:inline-block;height:20px;width:20px}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,var(--brand-navy),#11426f 60%, var(--brand-blue));color:#fff}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding-block:48px}
+    .hero h1{font-size:clamp(28px,4.2vw,44px);line-height:1.1;margin:0 0 12px;font-weight:800}
+    .hero p{margin:0 0 22px;color:#e8eef6;font-size:clamp(15px,2vw,18px)}
+    .hero .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:26px;border-radius:var(--radius)}
+    .hero .media{justify-self:end}
+    .hero .media img{max-width:100%;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.25)}
+
+    /* Sections */
+    section{padding-block:52px}
+    .section-title{font-size:28px;margin:0 0 24px;color:var(--brand-navy)}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card-service{background:var(--card);border:1px solid #e7edf5;border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+    .card-service h3{margin:12px 0 8px;font-size:18px;color:var(--brand-navy)}
+    .card-service p{margin:0;color:var(--muted);font-size:14px}
+    .card-service .mini{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:10px 12px;border-radius:999px;background:#fff;border:1px solid #e7edf5;font-weight:600}
+    .card-service svg{height:26px;width:26px;color:var(--brand-blue)}
+
+    .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .benefits li{list-style:none;display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:var(--card);border:1px solid #e7edf5;border-radius:12px}
+
+    .about{background:#f9fbff;border-top:1px solid #eef2f7}
+    .about p{max-width:880px;color:#324357}
+
+    .cta-final{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--brand-navy);color:#cfe3ff;padding:22px;border-radius:18px}
+    .cta-final h4{margin:0;color:#fff;font-size:20px}
+
+    footer{padding-block:26px;border-top:1px solid #eef2f7;color:#6b7a8a;font-size:14px}
+
+    /* Responsive */
+    @media (max-width:960px){
+      .hero .wrap{grid-template-columns:1fr}
+      .hero .media{justify-self:stretch}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .cta-final{flex-direction:column;align-items:stretch;text-align:center}
+    }
+    @media (max-width:520px){
+      .services{grid-template-columns:1fr}
+      .benefits{grid-template-columns:1fr}
+      .btn-whatsapp{width:100%;justify-content:center}
+      .logo .name{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header sem menu, apenas logo + CTA WhatsApp com o número visível -->
+  <header>
+    <div class="container bar">
+      <div class="logo">
+  <img src="logo.png" alt="Logo L&M CRED" onerror="this.style.display='none'">
+</div>
+      <a class="btn-whatsapp" href="https://wa.me/5511973093890" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.06 0C5.52 0 .22 5.28.22 11.8c0 2.08.54 4.1 1.57 5.9L0 24l6.47-1.7a11.74 11.74 0 0 0 5.6 1.44h.01c6.53 0 11.84-5.28 11.84-11.8 0-3.15-1.24-6.1-3.4-8.46ZM12.06 21.2c-1.84 0-3.65-.5-5.23-1.45l-.38-.23-3.84 1.01 1.02-3.75-.25-.39a9.74 9.74 0 0 1-1.52-5.1c0-5.36 4.39-9.72 9.78-9.72 2.61 0 5.06 1.02 6.9 2.86a9.67 9.67 0 0 1 2.86 6.86c0 5.36-4.39 9.72-9.78 9.72Zm5.39-7.32c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.3-.74.94-.9 1.14-.17.2-.33.22-.62.07-.29-.15-1.24-.45-2.37-1.43-.88-.75-1.47-1.67-1.64-1.97-.17-.3-.02-.46.13-.61.14-.14.3-.37.45-.56.15-.2.19-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.64-1.54-.88-2.1-.23-.56-.47-.48-.64-.49-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.07 3.3 5.02 4.49.7.3 1.25.48 1.68.61.7.22 1.34.19 1.84.12.56-.08 1.7-.7 1.94-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.55-.35Z"/></svg>
+        <span><strong>(11) 97309-3890</strong></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="container wrap">
+      <div class="card">
+        <h1>Realize seus sonhos com a L&amp;M CRED</h1>
+        <p>Oferecemos soluções financeiras rápidas, seguras e sem burocracia.</p>
+        <p>
+          <a class="btn-whatsapp" href="https://wa.me/5511973093890" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.06 0C5.52 0 .22 5.28.22 11.8c0 2.08.54 4.1 1.57 5.9L0 24l6.47-1.7a11.74 11.74 0 0 0 5.6 1.44h.01c6.53 0 11.84-5.28 11.84-11.8 0-3.15-1.24-6.1-3.4-8.46ZM12.06 21.2c-1.84 0-3.65-.5-5.23-1.45l-.38-.23-3.84 1.01 1.02-3.75-.25-.39a9.74 9.74 0 0 1-1.52-5.1c0-5.36 4.39-9.72 9.78-9.72 2.61 0 5.06 1.02 6.9 2.86a9.67 9.67 0 0 1 2.86 6.86c0 5.36-4.39 9.72-9.78 9.72Zm5.39-7.32c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.3-.74.94-.9 1.14-.17.2-.33.22-.62.07-.29-.15-1.24-.45-2.37-1.43-.88-.75-1.47-1.67-1.64-1.97-.17-.3-.02-.46.13-.61.14-.14.3-.37.45-.56.15-.2.19-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.64-1.54-.88-2.1-.23-.56-.47-.48-.64-.49-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.07 3.3 5.02 4.49.7.3 1.25.48 1.68.61.7.22 1.34.19 1.84.12.56-.08 1.7-.7 1.94-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.55-.35Z"/></svg>
+            <span><strong>(11) 97309-3890</strong></span>
+          </a>
+        </p>
+      </div>
+      <div class="media">
+        <!-- Imagem ilustrativa opcional – pode substituir pelo que preferir -->
+        <img src="cliente.png" alt="Cliente sorrindo usando o celular"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Serviços -->
+  <section class="container">
+    <h2 class="section-title">Nossos principais serviços</h2>
+    <div class="services">
+      <article class="card-service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <h3>Adiantamento Saque Aniversário FGTS</h3>
+        <p>Antecipe suas parcelas do FGTS com segurança e rapidez.</p>
+        <a class="mini" href="https://wa.me/5511973093890" target="_blank" rel="noopener">Quero saber mais</a>
+      </article>
+      <article class="card-service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h18v10H3z"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+        <h3>Crédito Consignado Trabalhador Privado</h3>
+        <p>Condições especiais para CLT com desconto em folha.</p>
+        <a class="mini" href="https://wa.me/5511973093890" target="_blank" rel="noopener">Quero saber mais</a>
+      </article>
+      <article class="card-service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        <h3>Crédito Consignado INSS</h3>
+        <p>Aposentados e pensionistas com taxas competitivas.</p>
+        <a class="mini" href="https://wa.me/5511973093890" target="_blank" rel="noopener">Quero saber mais</a>
+      </article>
+      <article class="card-service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 2h8v4H8z"/><rect x="5" y="6" width="14" height="14" rx="2"/><path d="M8 11h8M8 15h8"/></svg>
+        <h3>Crédito na Fatura de Energia</h3>
+        <p>Use sua conta de luz como meio de pagamento do empréstimo.</p>
+        <a class="mini" href="https://wa.me/5511973093890" target="_blank" rel="noopener">Quero saber mais</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section class="container">
+    <h2 class="section-title">Benefícios</h2>
+    <ul class="benefits">
+      <li>✅ Atendimento rápido e transparente</li>
+      <li>✅ Sem burocracia</li>
+      <li>✅ Condições especiais para você</li>
+      <li>✅ Simulação grátis pelo WhatsApp</li>
+    </ul>
+  </section>
+
+  <!-- Sobre nós -->
+  <section class="about">
+    <div class="container">
+      <h2 class="section-title">Sobre Nós</h2>
+      <p>
+        A <strong>L&amp;M CRED</strong> nasceu com o propósito de oferecer crédito acessível e soluções financeiras personalizadas. Nosso compromisso é trazer segurança, agilidade e respeito em cada atendimento.
+      </p>
+      <div class="cta-final">
+        <h4>Pronto para conquistar sua liberdade financeira?</h4>
+        <a class="btn-whatsapp" href="https://wa.me/5511973093890" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.06 0C5.52 0 .22 5.28.22 11.8c0 2.08.54 4.1 1.57 5.9L0 24l6.47-1.7a11.74 11.74 0 0 0 5.6 1.44h.01c6.53 0 11.84-5.28 11.84-11.8 0-3.15-1.24-6.1-3.4-8.46ZM12.06 21.2c-1.84 0-3.65-.5-5.23-1.45l-.38-.23-3.84 1.01 1.02-3.75-.25-.39a9.74 9.74 0 0 1-1.52-5.1c0-5.36 4.39-9.72 9.78-9.72 2.61 0 5.06 1.02 6.9 2.86a9.67 9.67 0 0 1 2.86 6.86c0 5.36-4.39 9.72-9.78 9.72Zm5.39-7.32c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.3-.74.94-.9 1.14-.17.2-.33.22-.62.07-.29-.15-1.24-.45-2.37-1.43-.88-.75-1.47-1.67-1.64-1.97-.17-.3-.02-.46.13-.61.14-.14.3-.37.45-.56.15-.2.19-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.64-1.54-.88-2.1-.23-.56-.47-.48-.64-.49-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.07 3.3 5.02 4.49.7.3 1.25.48 1.68.61.7.22 1.34.19 1.84.12.56-.08 1.7-.7 1.94-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.2-.55-.35Z"/></svg>
+          <span><strong>(11) 97309-3890</strong></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> L&amp;M CRED — WhatsApp: (11) 97309-3890
+    </div>
+  </footer>
+
+  <script>
+    // Atualiza ano automaticamente no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
